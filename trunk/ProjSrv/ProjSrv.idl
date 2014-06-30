@@ -1,0 +1,107 @@
+// ProjSrv.idl : IDL source for ProjSrv
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ProjSrv.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(53121B82-61ED-4747-9E10-3599FCF40932),
+	dual,
+	nonextensible,
+	helpstring("IrXmlFile Interface"),
+	pointer_default(unique)
+]
+interface IrXmlFile : IDispatch{
+	[id(1), helpstring("method Init"), hidden] HRESULT Init([out,retval] LONG* lResult);
+	[id(2), helpstring("method UnInit"), hidden] HRESULT UnInit(void);
+	[id(3), helpstring("method CreateIt"), hidden] HRESULT CreateIt([in] BSTR bstrXml, [out,retval] VARIANT_BOOL* bSuccess);
+	[id(4), helpstring("method SaveIt"), hidden] HRESULT SaveIt([in] BSTR bstrFile, [in] VARIANT_BOOL bOverwrite, [out,retval] LONG* lResult);
+	[id(5), helpstring("method GetNodeCount"), hidden] HRESULT GetNodeCount([in] BSTR bstrXPath, [out,retval] LONG* lNodes);
+	[id(6), helpstring("method GetParentAttribute"), hidden] HRESULT GetParentAttribute([in] BSTR bstrXPath, [in] BSTR bstrAttribute, [in] LONG lIndex, [out,retval] BSTR* bstrValue);
+	[id(7), helpstring("method GetAttribute"), hidden] HRESULT GetAttribute([in] BSTR bstrXPath, [in] BSTR bstrAttribute, [in] LONG lIndex, [out,retval] BSTR* bstrValue);
+	[id(8), helpstring("method SetAttribute"), hidden] HRESULT SetAttribute([in] BSTR bstrXPath, [in] BSTR bstrAttribute, [in] BSTR bstrValue, [in] LONG lIndex, [out,retval] VARIANT_BOOL* bSuccess);
+	[id(9), helpstring("method RemoveAll"), hidden] HRESULT RemoveAll([in] BSTR bstrXPath, [out,retval] VARIANT_BOOL* bSuccess);
+	[id(10), helpstring("method AddNodeToEndOfList"), hidden] HRESULT AddNodeToEndOfList([in] BSTR bstrXPath, [in] BSTR bstrTagName, [out,retval] LONG* lPosition);
+	[id(11), helpstring("method AddNodeAsChild"), hidden] HRESULT AddNodeAsChild([in] BSTR bstrXPath, [in] BSTR bstrTagName, [in] LONG lIndex, [out,retval] VARIANT_BOOL* bSuccess);
+	[id(12), helpstring("method GetXmlFragment"), hidden] HRESULT GetXmlFragment([in] BSTR bstrXPath, [out,retval] BSTR* bstrXmlFragment);
+	[id(13), helpstring("method RegisterIt"), hidden] HRESULT RegisterIt([in] BSTR bstrId, [out,retval] LONG* lResult);
+	[id(14), helpstring("method GetTagName"), hidden] HRESULT GetTagName([in] BSTR bstrXPath, [in] LONG lIndex, [out,retval] BSTR* bstrTagName);
+};
+[
+	object,
+	uuid(70D7A267-EBCD-491D-8BA5-1CE8B9FB9EFC),
+	dual,
+	nonextensible,
+	helpstring("IrBldProjectXml Interface"),
+	pointer_default(unique)
+]
+interface IrBldProjectXml : IDispatch{
+	[id(1), helpstring("method Init")] HRESULT Init([in] BSTR bstrProjectId, [out,retval] LONG* lResult);
+	[id(2), helpstring("method UnInit")] HRESULT UnInit(void);
+	[id(3), helpstring("method Select")] HRESULT Select([in] BSTR bstrXPath, [out,retval] LONG* lNodeCount);
+	[id(4), helpstring("method GetNodeCount")] HRESULT GetNodeCount([out,retval] LONG* lNodeCount);
+	[id(5), helpstring("method GetAttribute")] HRESULT GetAttribute([in] BSTR bstrAttribute, [out,retval] BSTR* bstrValue);
+	[id(6), helpstring("method GetParentAttribute")] HRESULT GetParentAttribute([in] BSTR bstrAttribute, [out,retval] BSTR* bstrValue);
+	[id(7), helpstring("method SetAttribute")] HRESULT SetAttribute([in] BSTR bstrAttribute, [in] BSTR bstrValue, [out,retval] VARIANT_BOOL* bSuccess);
+	[id(8), helpstring("method RemoveAll")] HRESULT RemoveAll([out,retval] VARIANT_BOOL* bSuccess);
+	[id(9), helpstring("method AddNodeToEndOfList")] HRESULT AddNodeToEndOfList([in] BSTR bstrTagName, [out,retval] LONG* lNewPosition);
+	[id(10), helpstring("method AddNodeAsChild")] HRESULT AddNodeAsChild([in] BSTR bstrTagName, [out,retval] VARIANT_BOOL* bSuccess);
+	[id(11), helpstring("method GetXmlFragment")] HRESULT GetXmlFragment([out,retval] BSTR* bstrStringFragment);
+	[id(12), helpstring("method CounterNext")] HRESULT CounterNext([out,retval] LONG* lCounter);
+	[id(13), helpstring("method CounterLast")] HRESULT CounterLast([out,retval] LONG* lCounter);
+	[id(14), helpstring("method GetXPath")] HRESULT GetXPath([out,retval] BSTR* bstrXPath);
+	[id(15), helpstring("method GetCounter")] HRESULT GetCounter([out,retval] LONG* lCounter);
+	[id(16), helpstring("method SetPos")] HRESULT SetPos([in] BSTR bstrXPath, [in] LONG lCounter);
+	[id(17), helpstring("method GetTagName")] HRESULT GetTagName([out,retval] BSTR* bstrName);
+};
+[
+	object,
+	uuid(11CCF09F-9C31-49B9-9651-C2A0ECF31C75),
+	dual,
+	nonextensible,
+	helpstring("IrBldProperties Interface"),
+	pointer_default(unique)
+]
+interface IrBldProperties : IDispatch{
+	[id(1), helpstring("method Init")] HRESULT Init([in] BSTR bstrProjectId, [out,retval] LONG* lResult);
+	[id(2), helpstring("method GetProperty")] HRESULT GetProperty([in] BSTR bstrName, [out,retval] BSTR* bstrValue);
+	[id(3), helpstring("method SetProperty")] HRESULT SetProperty([in] BSTR bstrName, [in] BSTR bstrValue);
+	[id(4), helpstring("method UnInit")] HRESULT UnInit(void);
+};
+[
+	uuid(E49DE006-D2B5-4887-8184-19963AA75B8B),
+	version(1.0),
+	helpstring("ProjSrv 1.0 Type Library")
+]
+library ProjSrvLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(D108C947-DD92-4E0F-96DC-2675A734B5CA),
+		helpstring("rXmlFile Class")
+	]
+	coclass rXmlFile
+	{
+		[default] interface IrXmlFile;
+	};
+	[
+		uuid(E6AA1F6E-2202-4B74-B8FE-5F336953C48F),
+		helpstring("rBldProjectXml Class")
+	]
+	coclass rBldProjectXml
+	{
+		[default] interface IrBldProjectXml;
+	};
+	[
+		uuid(8DBFE654-AD86-4567-A22F-DD2D9D520AE2),
+		helpstring("rBldProperties Class")
+	]
+	coclass rBldProperties
+	{
+		[default] interface IrBldProperties;
+	};
+};

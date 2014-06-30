@@ -1,0 +1,26 @@
+HKCR
+{
+	ProjSrv.rXmlFile.1 = s 'rXmlFile Class'
+	{
+		CLSID = s '{D108C947-DD92-4E0F-96DC-2675A734B5CA}'
+	}
+	ProjSrv.rXmlFile = s 'rXmlFile Class'
+	{
+		CLSID = s '{D108C947-DD92-4E0F-96DC-2675A734B5CA}'
+		CurVer = s 'ProjSrv.rXmlFile.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D108C947-DD92-4E0F-96DC-2675A734B5CA} = s 'rXmlFile Class'
+		{
+			ProgID = s 'ProjSrv.rXmlFile.1'
+			VersionIndependentProgID = s 'ProjSrv.rXmlFile'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E49DE006-D2B5-4887-8184-19963AA75B8B}'
+		}
+	}
+}

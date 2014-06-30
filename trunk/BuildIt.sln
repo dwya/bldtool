@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BuildIt", "BuildIt\BuildIt.vcproj", "{EC9939C7-D7C0-4769-A335-1573F989D24C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2D949BE-C1C3-4CA3-88CE-439A92FE2030} = {F2D949BE-C1C3-4CA3-88CE-439A92FE2030}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{1FD00153-2612-4594-84A4-1C56EB3CEADB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Proj", "Proj\Proj.vcproj", "{218D0C20-BB9D-4B66-9D80-7067C09DDC99}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86C608D0-A5DE-4A4E-AF67-D262054ABB45} = {86C608D0-A5DE-4A4E-AF67-D262054ABB45}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{3C65E712-7314-4F0A-B91C-B9BE593AE22C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RedHelperFn", "_Libs\RedHelperFn\RedHelperFn.vcproj", "{86C608D0-A5DE-4A4E-AF67-D262054ABB45}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Build", "Build\Build.vcproj", "{F2D949BE-C1C3-4CA3-88CE-439A92FE2030}"
+	ProjectSection(ProjectDependencies) = postProject
+		{218D0C20-BB9D-4B66-9D80-7067C09DDC99} = {218D0C20-BB9D-4B66-9D80-7067C09DDC99}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProjSrv", "ProjSrv\ProjSrv.vcproj", "{6895AC9D-37E5-4AB7-98A6-ABCD2B2FB981}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0BA73512-2935-4FB0-8835-7A84496A4FEE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProjSrvPS", "ProjSrv\ProjSrvPS.vcproj", "{7313E0BD-8E6A-4A8E-BB0E-72F541B60B26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC9939C7-D7C0-4769-A335-1573F989D24C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EC9939C7-D7C0-4769-A335-1573F989D24C}.Debug|Win32.Build.0 = Debug|Win32
+		{EC9939C7-D7C0-4769-A335-1573F989D24C}.Release|Win32.ActiveCfg = Release|Win32
+		{EC9939C7-D7C0-4769-A335-1573F989D24C}.Release|Win32.Build.0 = Release|Win32
+		{218D0C20-BB9D-4B66-9D80-7067C09DDC99}.Debug|Win32.ActiveCfg = Debug|Win32
+		{218D0C20-BB9D-4B66-9D80-7067C09DDC99}.Debug|Win32.Build.0 = Debug|Win32
+		{218D0C20-BB9D-4B66-9D80-7067C09DDC99}.Release|Win32.ActiveCfg = Release|Win32
+		{218D0C20-BB9D-4B66-9D80-7067C09DDC99}.Release|Win32.Build.0 = Release|Win32
+		{86C608D0-A5DE-4A4E-AF67-D262054ABB45}.Debug|Win32.ActiveCfg = Debug|Win32
+		{86C608D0-A5DE-4A4E-AF67-D262054ABB45}.Debug|Win32.Build.0 = Debug|Win32
+		{86C608D0-A5DE-4A4E-AF67-D262054ABB45}.Release|Win32.ActiveCfg = Release|Win32
+		{86C608D0-A5DE-4A4E-AF67-D262054ABB45}.Release|Win32.Build.0 = Release|Win32
+		{F2D949BE-C1C3-4CA3-88CE-439A92FE2030}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F2D949BE-C1C3-4CA3-88CE-439A92FE2030}.Debug|Win32.Build.0 = Debug|Win32
+		{F2D949BE-C1C3-4CA3-88CE-439A92FE2030}.Release|Win32.ActiveCfg = Release|Win32
+		{F2D949BE-C1C3-4CA3-88CE-439A92FE2030}.Release|Win32.Build.0 = Release|Win32
+		{6895AC9D-37E5-4AB7-98A6-ABCD2B2FB981}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6895AC9D-37E5-4AB7-98A6-ABCD2B2FB981}.Debug|Win32.Build.0 = Debug|Win32
+		{6895AC9D-37E5-4AB7-98A6-ABCD2B2FB981}.Release|Win32.ActiveCfg = Release|Win32
+		{6895AC9D-37E5-4AB7-98A6-ABCD2B2FB981}.Release|Win32.Build.0 = Release|Win32
+		{7313E0BD-8E6A-4A8E-BB0E-72F541B60B26}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7313E0BD-8E6A-4A8E-BB0E-72F541B60B26}.Debug|Win32.Build.0 = Debug|Win32
+		{7313E0BD-8E6A-4A8E-BB0E-72F541B60B26}.Release|Win32.ActiveCfg = Release|Win32
+		{7313E0BD-8E6A-4A8E-BB0E-72F541B60B26}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86C608D0-A5DE-4A4E-AF67-D262054ABB45} = {1FD00153-2612-4594-84A4-1C56EB3CEADB}
+		{6895AC9D-37E5-4AB7-98A6-ABCD2B2FB981} = {0BA73512-2935-4FB0-8835-7A84496A4FEE}
+		{7313E0BD-8E6A-4A8E-BB0E-72F541B60B26} = {0BA73512-2935-4FB0-8835-7A84496A4FEE}
+	EndGlobalSection
+EndGlobal

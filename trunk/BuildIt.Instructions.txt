@@ -1,0 +1,16 @@
+
+Build;	.\ProjSrv\ProjSrv.sln
+Build;	.\BuildIt.sln
+
+Copy; 	.\ProjSrv\Debug\ProjSrv.dll to .\Debug\ProjSrv.dll
+Run;	regsvr32.exe .\Debug\ProjSrv.dll
+
+Copy;	.\_Content\Scripts to .\Debug\Scripts
+
+-> Ready to debug
+-> The xml file needs to be the first parameter at the command line
+
+ie;
+BuildIt.exe MyXml.xml		(MyXml.xml needs to be in the same folder as BuildIt.exe)
+BuildIt.exe C:\MyXml.xml	(or you can use a full path)	
+

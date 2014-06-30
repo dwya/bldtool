@@ -1,0 +1,26 @@
+HKCR
+{
+	ProjSrv.rBldProperties.1 = s 'rBldProperties Class'
+	{
+		CLSID = s '{8DBFE654-AD86-4567-A22F-DD2D9D520AE2}'
+	}
+	ProjSrv.rBldProperties = s 'rBldProperties Class'
+	{
+		CLSID = s '{8DBFE654-AD86-4567-A22F-DD2D9D520AE2}'
+		CurVer = s 'ProjSrv.rBldProperties.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8DBFE654-AD86-4567-A22F-DD2D9D520AE2} = s 'rBldProperties Class'
+		{
+			ProgID = s 'ProjSrv.rBldProperties.1'
+			VersionIndependentProgID = s 'ProjSrv.rBldProperties'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E49DE006-D2B5-4887-8184-19963AA75B8B}'
+		}
+	}
+}

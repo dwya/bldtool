@@ -1,0 +1,26 @@
+HKCR
+{
+	ProjSrv.rBldProjectXml.1 = s 'rBldProjectXml Class'
+	{
+		CLSID = s '{E6AA1F6E-2202-4B74-B8FE-5F336953C48F}'
+	}
+	ProjSrv.rBldProjectXml = s 'rBldProjectXml Class'
+	{
+		CLSID = s '{E6AA1F6E-2202-4B74-B8FE-5F336953C48F}'
+		CurVer = s 'ProjSrv.rBldProjectXml.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E6AA1F6E-2202-4B74-B8FE-5F336953C48F} = s 'rBldProjectXml Class'
+		{
+			ProgID = s 'ProjSrv.rBldProjectXml.1'
+			VersionIndependentProgID = s 'ProjSrv.rBldProjectXml'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E49DE006-D2B5-4887-8184-19963AA75B8B}'
+		}
+	}
+}

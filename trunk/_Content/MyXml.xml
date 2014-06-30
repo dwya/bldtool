@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildIt name="project Name">
+
+  <Actions>
+    
+    <Action name="ExportSource" script="" />
+    <Action name="BldServer" script="" />
+    <Action name="BldClient" script="" />
+    <Action name="CheckoutRelease" script="" />
+    <Action name="CopyToRelease" script="" />
+    <Action name="CommitRelease" script="" />
+
+    <Action name="testVbs" script="[rProductFolder]Scripts\Test.vbs" />
+    <Action name="testCmd" script="[rProductFolder]Scripts\Test.cmd" />
+    <Action name="testBat" script="[rProductFolder]Scripts\Test.bat" />
+    <Action name="testPl" script="[rProductFolder]Scripts\Tester.pl" />
+    <Action name="testExe" script="[WindowsFolder]Notepad.exe" cmdline="[rProductFolder]Scripts\Tester.pl" />
+    <Action name="testDll" script="[rProductFolder]ActionCore.dll" entrypoint="run_run" />
+  </Actions>
+  
+  <Sequence>
+
+    <Action name="testVbs" condition="" wait="1" failaction="ignore" />
+    <Action name="testPl" condition="" wait="1" failaction="ignore" />
+    
+    
+  </Sequence>
+  
+  <Properties>
+    <Property name="Interpreter.pl" value="C:\Perl\bin\perl.exe" />
+    <Property name="Interpreter.vbs" value="[SystemFolder]cscript.exe" />
+  </Properties>
+    
+</BuildIt>
+

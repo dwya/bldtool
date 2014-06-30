@@ -1,0 +1,10 @@
+; ProjSrv.def : Declares the module parameters.
+
+LIBRARY      "ProjSrv.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall		PRIVATE
